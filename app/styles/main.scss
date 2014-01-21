@@ -16,10 +16,10 @@ body * {
     margin: 0 auto;
 }
 
-.firstcontainer {
-    display: inline-block;
+@mixin firstcontainer {
+    display: block;
     height: 500px;
-    width: 500px;
+    width: 400px;
 }
 
 @mixin buttons ($height: 60px, $width: 300px){
@@ -44,7 +44,7 @@ body * {
     background: -ms-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* IE10+ */
     background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-&:hover {
+    &:hover {
     opacity: .8;
 }
 
@@ -55,6 +55,7 @@ body * {
     position: relative;
     width: 400px;
     height: 600px;
+
 }
 
 .onetext {
@@ -87,9 +88,96 @@ body * {
     @include buttons
 }
 
+.mixintwo {
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 800px;
+
+}
+
+@mixin einstein ($imgpath: url("images/avatar.png")) {
+    background-image: ($imgpath);
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    -webkit-transition: all 0.6s ease;
+     &:hover {
+    width: 400px;
+    height: 400px;
+    border-radius: 200px;
+    
+    }
+
+}
+
+.avatar {
+    @include einstein 
+}
+
+.avatar-two {
+    @include einstein 
+}
+
+.avatar-three {
+    @include einstein 
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+
+.toright {
+    display: inline-block;
+    height: 600px;
+    width: 500px;
+    position: absolute;
+    right:0;
+}
+
+.top {
+    display: inline-block;
+    width: 100%;
+    height: 700px;
+}
+
+.mixin-three {
+    display: block;
+
+}
+
+@mixin boxes ($color: blue, $bordercolor: black) {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: $color;
+    border-width: 6px;
+    border-color: $bordercolor;
+    border-style: solid;
+
+}
+
+.longbox {
+    @include boxes
+}
+.longbox-two {
+    @include boxes
+}
+
+.longbox-three {
+    @include boxes (green, red)
+}
+
+.bottomright {
+    display: inline;
+    position: absolute;
+    right:0;
+    margin-top: -538px;
 }

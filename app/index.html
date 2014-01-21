@@ -24,7 +24,9 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="container">
-            <div class="firstcontainer"><h1>Mixin 1</h2>
+            <div class="top">
+            <div class="firstcontainer">
+                <h1>Mixin 1</h2>
                 <div class="button-one">Button 1</div>
                 <div class="button-two">Button 2</div>
                 <div class="button-three">Button 3</div>
@@ -59,7 +61,79 @@
 }              
                 </xmp>
             </div>
-            
+            </div>
+            <div class="top">
+            <div class="mixintwo">
+                <h1>Mixin 2</h2>
+            <img class="avatar" src="images/avatar.png"><img class="avatar-two" src="images/elvis.png"> 
+            <div class="avatar-three"></div>  
+            </div>
+            <div class="toright">
+            <xmp>
+@mixin einstein ($imgpath: url("images/avatar.png")) {
+    background-image: ($imgpath);
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    -webkit-transition: all 0.6s ease;
+     &:hover {
+    width: 400px;
+    height: 400px;
+    border-radius: 200px;
+    
+    }
+
+}
+
+.avatar {
+    @include einstein 
+}
+
+.avatar-two {
+    @include einstein 
+}
+
+.avatar-three {
+    @include einstein 
+}
+            </xmp>
+            </div>
+            </div>
+            <div class="top">
+            <div class="mixin-three"><h2>Mixin 3</h2>
+                <div class="longbox"></div>
+                <div class="longbox-two"></div>
+                <div class="longbox-three"></div>
+                <div class="bottomright">
+                    <xmp>
+@mixin boxes ($color: blue, $bordercolor: black) {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: $color;
+    border-width: 6px;
+    border-color: $bordercolor;
+    border-style: solid;
+
+}
+
+.longbox {
+    @include boxes
+}
+.longbox-two {
+    @include boxes
+}
+
+.longbox-three {
+    @include boxes (green, red)
+}
+                    </xmp>
+                </div>
+            </div>
+            </div>
         </div>
 
         <!-- build:js scripts/vendor.js -->
