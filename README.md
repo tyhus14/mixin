@@ -13,3 +13,8 @@ This mixin is used for creating a simple look of an avatar.
 ### Mixin 3
 
 This mixin could be used for creating multiple boxes with the same style.
+
+
+#### Link
+
+http://tyhus14.github.io/mixin/
