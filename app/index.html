@@ -35,7 +35,7 @@
                 <div class="button-five">Button 5</div>
             </div>
             <div class="onetext">
-                <xmp>
+                <pre><code>
 @mixin buttons ($height: 60px, $width: 300px) {
     height: $height;
     width: $width;
@@ -60,7 +60,7 @@
 .button-three {
     @include buttons (200px, 200px)
 }              
-                </xmp>
+                </code></pre>
             </div>
             </div>
             <div class="top">
@@ -71,7 +71,7 @@
             <img class="avatar-three" src="images/avatar.png"> 
             </div>
             <div class="toright">
-            <xmp>
+            <pre><code>
 @mixin einstein ($imgpath: url("images/avatar.png")) {
     background-image: ($imgpath);
     height: 200px;
@@ -101,7 +101,7 @@
 .avatar-three {
     @include einstein 
 }
-            </xmp>
+            </code></pre>
             </div>
             </div>
             <div class="top">
@@ -110,7 +110,7 @@
                 <div class="longbox-two"></div>
                 <div class="longbox-three"></div>
                 <div class="bottomright">
-                    <xmp>
+                    <pre><code>
 @mixin boxes ($color: blue, $bordercolor: black) {
     display: block;
     width: 200px;
@@ -132,7 +132,7 @@
 .longbox-three {
     @include boxes (green, red)
 }
-                    </xmp>
+                    <pre/><code/>
                 </div>
             </div>
             </div>
