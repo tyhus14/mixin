@@ -1,4 +1,4 @@
-# H1 Mixins in SASS
+# Mixins in SASS
 
 With this project I created three separate mixins. I realize that the mixins that I created could be constructed by using a div class. I created these mixins to fully understand how mixins work.
 
